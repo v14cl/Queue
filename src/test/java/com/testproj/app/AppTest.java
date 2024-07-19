@@ -17,4 +17,21 @@ public class AppTest
     {
         assertTrue( true );
     }
+    
+    
+    /**
+     * We expect to get the value from the Queue the same as we put.
+     */
+    @Test
+    public void shouldGetSameAsPut_INT()
+    {
+        final int EXPECTED_VALUE = 5;
+        final int QUEUE_SIZE = 1;
+        
+        Queue test = new Queue(QUEUE_SIZE, DataType.INT);
+    
+        test.put_int(EXPECTED_VALUE);
+    
+        assertTrue( EXPECTED_VALUE == test.get_int());
+    }
 }
