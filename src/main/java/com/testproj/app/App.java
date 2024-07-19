@@ -22,7 +22,5 @@ public class App {
         System.out.println(q1.get_int());
         System.out.println(q1.get_int());
         System.out.println(q1.get_int());
-
-
     }
 }

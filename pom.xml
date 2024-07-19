@@ -5,10 +5,10 @@
   <modelVersion>4.0.0</modelVersion>
 
   <groupId>com.testproj.app</groupId>
-  <artifactId>my-first-app</artifactId>
+  <artifactId>Queue</artifactId>
   <version>1.0</version>
 
-  <name>my-first-app</name>
+  <name>Queue</name>
 
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
