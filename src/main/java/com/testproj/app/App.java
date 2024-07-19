@@ -6,7 +6,7 @@ package com.testproj.app;
  */
 public class App {
     public static void main(String args[]) {
-        Queue q1 = new Queue(10, "int");
+        Queue q1 = new Queue(10, DataType.INT);
         
         q1.put_int(1);
         q1.put_int(2);

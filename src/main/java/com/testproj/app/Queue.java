@@ -1,23 +1,29 @@
 package com.testproj.app;
 
+
+enum DataType {
+    CHAR,
+    INT,
+    DOUBLE
+}
+
+
 class Queue {
     double internal_arr[];
     int putloc, getloc;
-    String datatype; 
+    DataType datatype; 
     
-    Queue(int size, String data_type) {
+    Queue(int size, DataType data_type) {
         internal_arr = new double[size];
         putloc = getloc = 0;
-        if (data_type != "int" && data_type != "char" && data_type != "double") {
-            System.err.println("[ERROR] Unknown data type: " + data_type);
-        }
         datatype = data_type;
 
     }
-    
+
+
     // DOUBLE
     void put_double(double value) {
-        if (datatype != "double") {
+        if (datatype != DataType.DOUBLE) {
             System.err.println("[ERROR] The queue is supporting " + datatype + " data type!");
             return;
         }
@@ -30,7 +36,7 @@ class Queue {
     }
     
     double get_double() {
-        if (datatype != "double") {
+        if (datatype != DataType.DOUBLE) {
             System.err.println("[ERROR] The queue is supporting " + datatype + " data type!");
             return 0.0;
         }
@@ -49,7 +55,7 @@ class Queue {
     
     // CHAR
     void put_char(char value) {
-        if (datatype != "char") {
+        if (datatype != DataType.CHAR) {
             System.err.println("[ERROR] The queue is supporting " + datatype + " data type!");
             return;
         }
@@ -62,7 +68,7 @@ class Queue {
     }
     
     char get_char() {
-        if (datatype != "char") {
+        if (datatype != DataType.CHAR) {
             System.err.println("[ERROR] The queue is supporting " + datatype + " data type!");
             return '\u0000';
         }
@@ -81,7 +87,7 @@ class Queue {
     
     // INT
     void put_int(int value) {
-        if (datatype != "int") {
+        if (datatype != DataType.INT) {
             System.err.println("[ERROR] The queue is supporting " + datatype + " data type!");
             return;
         }
@@ -94,7 +100,7 @@ class Queue {
     }
     
     int get_int() {
-        if (datatype != "int") {
+        if (datatype != DataType.INT) {
             System.err.println("[ERROR] The queue is supporting " + datatype + " data type!");
             return 0;
         }
